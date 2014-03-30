@@ -1,13 +1,19 @@
 <html>
   <head>
     <title>My Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 	
 	<!-- Add jQuery library -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+	<!-- Modernizr -->
+  <script src="js/modernizr.js"></script>
 	
   </head>
   <body>
@@ -37,7 +43,17 @@
     </div>
     <div class="col-container-full">
       <div class="flexslider">
-        Slider
+		<ul class="slides">
+			<li>
+			  <img src="images/slider/1.jpg" height="400" />
+			</li>
+			<li>
+			  <img src="images/slider/2.jpg" height="400" />
+			</li>
+			<li>
+			  <img src="images/slider/3.jpg" height="400" />
+			</li>
+	    </ul>
       </div>
     </div>
     <div class="col-container">
@@ -78,5 +94,22 @@
         </ul>
       </div>
     </div>
+	  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    // Can also be used with $(document).ready()
+	$(window).load(function() {
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		controlNav: false,
+		directionNav: false
+	  });
+	});
+  </script>
   </body>
 </html>
