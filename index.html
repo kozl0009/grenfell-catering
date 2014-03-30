@@ -3,16 +3,13 @@
     <title>My Website</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	
-	<!-- Add jQuery library -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<!-- the CSS for Smooth Div Scroll -->
 	<link rel="Stylesheet" type="text/css" href="css/smoothDivScroll.css" />
 	<!-- Demo CSS -->
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-
+	
 	<!-- Modernizr -->
   <script src="js/modernizr.js"></script>
 	
@@ -42,8 +39,8 @@
         </div>
       </div>
     </div>
-    <div class="col-container-full">
-      <div class="flexslider">
+    <div class="col-container-full customers-slider">
+      <div id="slider" class="flexslider">
 		<ul class="slides">
 			<li>
 			  <img src="images/slider/1.jpg" height="400" />
@@ -60,15 +57,18 @@
     <div class="col-container">
       <div class="col-3">
         <div class="index-3-box">
-          <div class="image">&nbsp;d</div>
+          <div class="image"><img src="images/boxes/fish-and-chips.jpg" border="0" /></div>
           <div class="title">
             <h1>Take Out</h1>
           </div>
+		  <div class="content">
+		  Join us Every Friday for Guinness Beer Battered Fish and Chips! Fresh Haddock! Served with House tartar and lemon!
+		  </div>
         </div>
       </div>
       <div class="col-3">
         <div class="index-3-box">
-          <div class="image">&nbsp;d</div>
+          <div class="image"><img src="images/boxes/jerk-chicken.jpg" border="0" /></div>
           <div class="title">
             <h1>Frozen Meals</h1>
           </div>
@@ -76,7 +76,7 @@
       </div>
       <div class="col-3">
         <div class="index-3-box">
-          <div class="image">&nbsp;d</div>
+          <div class="image"><img src="images/boxes/sushi.jpg" border="0" /></div>
           <div class="title">
             <h1>Catering</h1>
           </div>
@@ -84,16 +84,37 @@
       </div>
     </div>
     <div class="col-container-full customers-slider">
-		<div class="flexslider2">
+		<div id="customers" class="flexslider flexslider2">
 			<ul class="slides">
 				<li>
-				  <img src="images/slider/1.jpg" height="150" />
+				  <img src="images/customers/apple.gif" />
 				</li>
 				<li>
-				  <img src="images/slider/2.jpg" height="150" />
+				  <img src="images/customers/cat.gif" />
 				</li>
 				<li>
-				  <img src="images/slider/3.jpg" height="150" />
+				  <img src="images/customers/hard_rock_cafe.gif" />
+				</li>
+				<li>
+				  <img src="images/customers/ibm.gif" />
+				</li>
+				<li>
+				  <img src="images/customers/k-mart.gif" />
+				</li>
+				<li>
+				  <img src="images/customers/quaker.gif" />
+				</li>
+				<li>
+				  <img src="images/customers/radioshack.gif" />
+				</li>
+				<li>
+				  <img src="images/customers/valvoline.gif" />
+				</li>
+				<li>
+				  <img src="images/customers/volvo.gif" />
+				</li>
+				<li>
+				  <img src="images/customers/vw.gif" />
 				</li>
 			</ul>
         </div>
@@ -105,36 +126,39 @@
       </div>
       <div class="col-2">
         <ul class="social">
-          <li class="facebook">F</li>
-          <li class="twitter">T</li>
+          <li class="facebook"></li>
+          <li class="twitter"></li>
         </ul>
       </div>
     </div>
 	  <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
 <!-- jQuery library - Please load it from Google API's -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
   <!-- FlexSlider -->
   <script defer src="js/jquery.flexslider.js"></script>
 
   <script type="text/javascript">
   
-    // Can also be used with $(document).ready()
-	$(window).load(function() {
-	  $('.flexslider').flexslider({
+      $(window).load(function() {
+	 $('#slider').flexslider({
 		animation: "slide",
 		controlNav: false,
-		directionNav: false
 	  });
 	  
-	  $('.flexslider2').flexslider({
-		animation: "slide",
-		animationLoop: false,
-		itemWidth: 210,
-		itemMargin: 5
-	  });
-	});
+	  $('#customers').flexslider({
+          animation: "slide",
+		  itemWidth: 100,
+		  itemMargin: 1,
+		  minItems: 9,
+		  maxItems: 9,
+		  move: 0,
+		  controlNav: false,
+		  directionNav: false,
+        });
+        
+      });
   </script>
   </body>
 </html>
