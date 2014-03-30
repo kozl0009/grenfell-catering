@@ -36,6 +36,9 @@ h1 {
 .col-container-full {
   width: 100%; }
 
+.customers-slider {
+  background: #fff; }
+
 .col-3 {
   float: left; }
   @media (min-width: 320px) {
@@ -90,6 +93,10 @@ h1 {
   height: 400px;
   border-top: 1px solid #313131;
   border-bottom: 1px solid #313131; }
+
+.flexslider2 {
+  margin: 0 auto 20px;
+  width: 646px; }
 
 .ul-menu {
   zoom: 1;
