@@ -2,14 +2,26 @@ body {
   margin: 10px 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #e1e3e4; }
+  background: #f4f7f8; }
 
 h1 {
   text-transform: uppercase;
   font-size: 0.9em;
   color: #171a1c; }
 
+@font-face {
+  font-family: 'Vivaldi Italic';
+  src: url("../fonts/vivaldi_italic/vivaldi_italic.eot");
+  src: url("../fonts/vivaldi_italic/vivaldi_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/vivaldi_italic/vivaldi_italic.svg#Vivaldi Italic") format("svg"), url("../fonts/vivaldi_italic/vivaldi_italic.woff") format("woff"), url("../fonts/vivaldi_italic/vivaldi_italic.ttf") format("truetype");
+  margin: 0;
+  padding: 0; }
+
 /* Mixins */
+#logo {
+  font-family: 'Vivaldi Italic';
+  font-size: 2.8em;
+  font-weight: 600; }
+
 .col-container {
   zoom: 1;
   margin: 0 auto 10px; }
@@ -44,8 +56,11 @@ h1 {
       padding-left: 3%; } }
   @media (min-width: 640px) {
     .col-3 {
-      width: 94%;
-      padding-left: 3%; } }
+      width: 32%;
+      padding-left: 0;
+      margin-left: 2%; }
+      .col-3:first-child {
+        margin-left: 0; } }
   @media (min-width: 960px) {
     .col-3 {
       width: 32%;
@@ -88,9 +103,19 @@ h1 {
 
 .customers-slider {
   background: #fff;
-  border-top: 1px solid #313131;
-  border-bottom: 1px solid #313131;
-  margin-bottom: 20px; }
+  border-top: 1px solid #cfcfce; }
+  @media (min-width: 320px) {
+    .customers-slider {
+      display: none; } }
+  @media (min-width: 640px) {
+    .customers-slider {
+      display: block; } }
+
+.logos-slider {
+  background: #fff;
+  border-top: 1px solid #cfcfce;
+  border-bottom: 1px solid #cfcfce;
+  margin: 20px 0; }
 
 .flexslider {
   height: 400px; }
@@ -115,31 +140,35 @@ h1 {
     height: 75px;
     margin-top: 10px; }
 
-.daily-special {
+.todays-special {
   float: left;
-  width: 96%;
-  padding: 5px 10px 5px 0;
-  min-height: 45px;
-  border-top: 1px dashed #c0c0c0; }
-  .daily-special .monday {
+  width: 100%;
+  padding: 10px 0 5px 0;
+  color: #6D0000;
+  font-weight: normal;
+  font-size: 1.2em;
+  background: #fff;
+  border-top: 1px solid #cfcfce;
+  border-bottom: 1px solid #cfcfce; }
+  .todays-special .monday {
     background: url("../images/days/monday.png") no-repeat; }
-  .daily-special .tuesday {
+  .todays-special .tuesday {
     background: url("../images/days/tuesday.png") no-repeat; }
-  .daily-special .wednesday {
+  .todays-special .wednesday {
     background: url("../images/days/wednesday.png") no-repeat; }
-  .daily-special .thursday {
+  .todays-special .thursday {
     background: url("../images/days/thursday.png") no-repeat; }
-  .daily-special .friday {
+  .todays-special .friday {
     background: url("../images/days/friday.png") no-repeat; }
-  .daily-special .monday, .daily-special .tuesday, .daily-special .wednesday, .daily-special .thursday, .daily-special .friday {
-    padding-left: 40px; }
-  .daily-special:last-child {
-    border-bottom: 0; }
+  .todays-special .monday, .todays-special .tuesday, .todays-special .wednesday, .todays-special .thursday, .todays-special .friday {
+    padding: 5px 40px;
+    margin-left: 40px;
+    min-height: 30px; }
 
 .ul-menu {
   zoom: 1;
   list-style: none;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 500px;
   font-size: 0.9em;
   color: #171a1c;
@@ -231,24 +260,22 @@ h1 {
     float: left;
     width: 100%; }
   .index-3-box .image img {
-    width: 100%;
+    width: 99.4%;
     height: 185px;
     border-top-left-radius: 10px;
     -moz-border-top-left-radius: 10px;
     -webkit-border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     -moz-border-top-right-radius: 10px;
-    -webkit-border-top-right-radius: 10px; }
+    -webkit-border-top-right-radius: 10px;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999; }
   .index-3-box .title {
     background: #6D0000;
     float: left;
     width: 100%;
-    border-top-left-radius: 10px;
-    -moz-border-top-left-radius: 10px;
-    -webkit-border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    -moz-border-top-right-radius: 10px;
-    -webkit-border-top-right-radius: 10px; }
+    /* @include border-top-radius(10px); */ }
   .index-3-box h1 {
     padding: 6px;
     color: #fff; }

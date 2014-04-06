@@ -2,13 +2,24 @@ body  {
   margin: 10px 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #e1e3e4;
+  background: #f4f7f8;
 }
 
 h1 {
   text-transform: uppercase;
   font-size: 0.9em;
   color: #171a1c;
+}
+
+@font-face{
+    font-family: 'Vivaldi Italic'; 
+    src: url('../fonts/vivaldi_italic/vivaldi_italic.eot'); 
+    src: url('../fonts/vivaldi_italic/vivaldi_italic.eot?#iefix') format('embedded-opentype'), 
+	   url('../fonts/vivaldi_italic/vivaldi_italic.svg#Vivaldi Italic') format('svg'), 
+	   url('../fonts/vivaldi_italic/vivaldi_italic.woff') format('woff'), 
+	   url('../fonts/vivaldi_italic/vivaldi_italic.ttf') format('truetype'); 
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -43,6 +54,12 @@ h1 {
   -moz-border-top-right-radius: $border-radius;
   -webkit-border-top-right-radius: $border-radius;
  }
+ 
+#logo {
+	font-family: 'Vivaldi Italic';
+	font-size: 2.8em;
+	font-weight: 600;
+}
 
 .col-container {
   @include clearfix;
@@ -73,8 +90,10 @@ h1 {
     padding-left: 3%;
   }
   @media (min-width: 640px){
-    width: 94%;
-    padding-left: 3%;
+    width: 32%;
+    padding-left: 0;
+    margin-left: 2%;
+    &:first-child{margin-left: 0;}
   }
   @media (min-width: 960px){
     width: 32%;
@@ -118,9 +137,20 @@ h1 {
 
 .customers-slider {
 	background: #fff;
-	border-top: 1px solid #313131;
-    border-bottom: 1px solid #313131;
-	margin-bottom: 20px;
+	border-top: 1px solid #cfcfce;
+	@media (min-width: 320px){
+		display: none;
+	}
+    @media (min-width: 640px){
+        display: block;
+	}
+}
+
+.logos-slider {
+	background: #fff;
+	border-top: 1px solid #cfcfce;
+    border-bottom: 1px solid #cfcfce;
+	margin: 20px 0;
 }
 
 .flexslider {
@@ -157,11 +187,16 @@ h1 {
 	}
 }
 
-.daily-special {
+.todays-special {
 	float: left;
-	width: 96%;
-	padding: 5px 10px 5px 0;
-	min-height: 45px;
+	width: 100%;
+	padding: 10px 0 5px 0;
+	color: #6D0000;
+	font-weight: normal;
+	font-size: 1.2em;
+	background: #fff;
+	border-top: 1px solid #cfcfce;
+    border-bottom: 1px solid #cfcfce;
 	
 	.monday {
 		background: url('../images/days/monday.png') no-repeat;
@@ -184,12 +219,10 @@ h1 {
 	}
 	
 	.monday, .tuesday, .wednesday, .thursday, .friday {
-		padding-left: 40px;
+		padding: 5px 40px;
+		margin-left: 40px;
+		min-height: 30px;
 	}
-	
-	border-top: 1px dashed #c0c0c0;
-	&:last-child {border-bottom: 0;}
-
 }
 
 
@@ -197,7 +230,7 @@ h1 {
 .ul-menu {
   @include clearfix;
   list-style: none;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 500px;
   font-size: 0.9em;
   color: #171a1c;
@@ -300,16 +333,19 @@ h1 {
   }
   
   .image img {
-	width: 100%;
+	width: 99.4%;
 	height: 185px;
 	@include border-top-radius(10px);
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
   }
   
   .title{
     background: #6D0000;
     float:left;
     width: 100%;
-	@include border-top-radius(10px);
+	/* @include border-top-radius(10px); */
   }
   
   h1{
