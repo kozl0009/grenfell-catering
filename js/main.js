@@ -47,4 +47,8 @@ $(document).ready(function(){
     $(".select-menu-ul").slideToggle( "slow" );
     return false;
   });
+  
+  $(".todays-special").click(function(e){
+	   $(this).find('.order-special-online').slideToggle();
+	});
 });

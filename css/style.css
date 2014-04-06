@@ -149,7 +149,9 @@ h1 {
   font-size: 1.2em;
   background: #fff;
   border-top: 1px solid #cfcfce;
-  border-bottom: 1px solid #cfcfce; }
+  border-bottom: 1px solid #cfcfce;
+  cursor: pointer;
+  cursor: hand; }
   .todays-special .monday {
     background: url("../images/days/monday.png") no-repeat; }
   .todays-special .tuesday {
@@ -164,6 +166,10 @@ h1 {
     padding: 5px 40px;
     margin-left: 40px;
     min-height: 30px; }
+  .todays-special .order-special-online {
+    display: none;
+    padding: 5px 40px;
+    margin-left: 40px; }
 
 .ul-menu {
   zoom: 1;
