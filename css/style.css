@@ -183,6 +183,15 @@ h1 {
     height: 400px;
     width: 308px;
     float: left; }
+  .todays-special .order-button {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #6D0000;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    font-size: 1.2em; }
 
 .ul-menu {
   zoom: 1;
