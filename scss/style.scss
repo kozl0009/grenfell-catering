@@ -236,11 +236,11 @@ h1 {
 		float: left;
 		
 		@media (min-width: 640){
-			width: 336px;
+			width: 210px;
 		}
 		
 		@media (min-width: 980){
-			width: 600px;
+			width: 500px;
 		}
 	}
 	
@@ -249,7 +249,7 @@ h1 {
 	}
 	
 	.chef-christine {
-	
+		
 	}
 	
 	.chef-holder {
@@ -257,6 +257,14 @@ h1 {
 		height: 400px;
 		width: 308px;
 		float: left;
+		
+		@media (min-width: 320){
+			display: none;
+		}
+		
+		@media (min-width: 640){
+			display: block;
+		}
 	}
 	
 	.order-button {
