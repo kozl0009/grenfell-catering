@@ -48,7 +48,7 @@ $(document).ready(function(){
     return false;
   });
   
-  $(".todays-special").click(function(e){
-	   $(this).find('.order-special-online').slideToggle();
+  $(".day").click(function(e){
+	   $(".order-special-online").slideToggle();
 	});
 });

@@ -190,7 +190,7 @@ h1 {
 .todays-special {
 	float: left;
 	width: 100%;
-	padding: 10px 0 5px 0;
+	padding: 10px 0 0 0;
 	color: #6D0000;
 	font-weight: normal;
 	font-size: 1.2em;
@@ -228,8 +228,35 @@ h1 {
 	
 	.order-special-online {
 		display: none;
-		padding: 5px 40px;
+		padding: 5px 40px 0;
 		margin-left: 40px;
+	}
+	
+	.order-form {
+		float: left;
+		
+		@media (min-width: 640){
+			width: 336px;
+		}
+		
+		@media (min-width: 980){
+			width: 600px;
+		}
+	}
+	
+	.chef-mark {
+	
+	}
+	
+	.chef-christine {
+	
+	}
+	
+	.chef-holder {
+		background: url('../images/o-FEMALE-CHEF-facebook.jpg') no-repeat bottom right;
+		height: 400px;
+		width: 308px;
+		float: left;
 	}
 }
 
