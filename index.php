@@ -29,10 +29,10 @@
       </div>
       <div class="col-2">
         <ul class="ul-menu">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Catering</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="gallery.php">Gallery</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <div class="select-menu">
