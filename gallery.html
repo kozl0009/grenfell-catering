@@ -17,7 +17,6 @@
 	<!-- Modernizr -->
   <script src="js/modernizr.js"></script>
 	<link type="text/css" rel="stylesheet" href="css/lightGallery.css" />                    
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/lightGallery.js"></script>
   </head>
   <body>
@@ -32,7 +31,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Catering</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li class="selected"><a href="gallery.html">Gallery</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <div class="select-menu">
@@ -47,73 +46,18 @@
         </div>
       </div>
     </div>
-    <div class="col-container-full customers-slider">
-      <div id="slider" class="flexslider">
-		<ul class="slides">
-			<li>
-			  <img src="images/slider/1.jpg" height="400" />
-			</li>
-			<li>
-			  <img src="images/slider/2.jpg" height="400" />
-			</li>
-			<li>
-			  <img src="images/slider/3.jpg" height="400" />
-			</li>
-	    </ul>
-      </div>
-    </div>
-	<div class="col-container-full todays-special">
-		<div class="day monday">Jerk Chicken and Rice $11.25 tax in!! Come before 12 noon and get a free drink!</div> 
-		<div class="order-special-online">
-			<div class="order-form">
-				<h1>Order online</h1>
-				<form name="orderForm" method="post" action="#">
-					<label for="name">Your name:</label><br />
-					<input type="text" id="name" name="name" value="" /><br /><br />
-					<label for="phone">Phone number:</label><br />
-					<input type="text" id="phone" name="phone" value="" /><br /><br />
-					<label for="instructions">Special instructions:</label><br />
-					<textarea name="instructions" id="instructions"></textarea><br /><br />
-					<input type="submit" name="submit" class="order-button" value="Order now" />
-				</form>
-			</div>
-			<div class="chef-holder"></div>
-		</div>	
-	</div>
-    <div class="col-container">
-      <div class="col-3">
-        <div class="index-3-box">
-          <div class="image"><img src="images/boxes/fish-and-chips.jpg" border="0" /></div>
-          <div class="title">
-            <h1>Take Out Specials</h1>
-          </div>
-		  <div class="content">
-		  <p>Come and enjoy our daily specials. More items available from the take out menu every day.</p>
-		  </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="index-3-box">
-          <div class="image"><img src="images/boxes/jerk-chicken.jpg" border="0" /></div>
-          <div class="title">
-            <h1>Frozen Meals</h1>
-          </div>
-		  <div class="content">
-		  <p>Come and enjoy our daily specials. More items available from the take out menu every day.</p>
-		  </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="index-3-box">
-          <div class="image"><img src="images/boxes/sushi.jpg" border="0" /></div>
-          <div class="title">
-            <h1>Catering</h1>
-          </div>
-		  <div class="content">
-		  <p>From <a href="#">Weddings</a>, <a href="#">Special events</a>, <a href="#">Corporate Events</a> or <a href="#">Home Entertaining</a>, we strive to make your occasion a memorable one!</p>
-		  </div>
-        </div>
-      </div>
+       <div class="col-container">
+		<ul id="lightGallery">
+		  <?php
+		  
+		  for($i=1, $i<73, $i++){
+			echo '<li data-src="images/gallery/'. $i . '.jpg">
+			<img src="images/gallery/'. $i . '.jpg" />
+		  </li>';
+		  }
+		  
+		  ?>
+		</ul>
     </div>
     <div class="col-container-full logos-slider">
 		<div id="customers" class="flexslider flexslider2">
